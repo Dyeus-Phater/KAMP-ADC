@@ -70,9 +70,9 @@ variable_large_piece_multiplier: 0.9
 
 | Scenario | Original Mesh | KAMP-ADC | Benefit |
 |----------|---------------|----------|---------|
-| Small (10%) | 121 points | 225 points | +86% precision |
-| Medium (35%) | 196 points | 196 points | Balanced |
-| Large (80%) | 121 points | 121 points | Maintains efficiency |
+| Small (10%) | 100 points | 150 (15) points | +50% precision |
+| Medium (40%) | 100 points | 125 (40) points | +25% Balanced |
+| Large (80%) | 100 points | 100 points | Maintains efficiency |
 
 # ⚠️ Disclaimer
 
