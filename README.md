@@ -74,6 +74,26 @@ variable_large_piece_multiplier: 0.9
 | Medium (40%) | 100 (40) points | 125 (50) points | +25% Balanced |
 | Large (80%) | 100 points | 100 points | Maintains efficiency |
 
+## Thermal Hold Timer Feature
+
+### What It Does
+The **Thermal Hold Timer** automatically adds a waiting period after the print bed reaches target temperature, before starting the mesh calibration. This ensures proper thermal stabilization across the entire print surface.
+
+### Why It Matters
+- **Large prints** require more time for the entire bed to reach thermal equilibrium
+- **Small prints** need less time but still benefit from stabilization
+- **Eliminates guessing** - automatic timing based on print size
+- **Improves first layer consistency** by ensuring uniform bed temperature
+
+### How It Works
+1. Bed reaches target temperature (`M190` completes)
+2. `BED_MESH_CALIBRATE` calculates print size ratio
+3. System determines appropriate wait time:
+   - Small/Medium: 3 minutes (180 seconds)
+   - Large: 5 minutes (300 seconds)
+4. Automatic pause (`G4 P[time_in_ms]`) ensures thermal stability
+5. Mesh calibration proceeds with optimal temperature distribution
+
 # ⚠️ Disclaimer
 
 **This mod was only tested on the Neptune 4 Pro V1.1.3.3. I can’t guarantee this won’t cause issues, but the changes I made are pretty minor compared to the original. If anyone with deeper Klipper knowledge wants to double-check, I’d really appreciate it.**
