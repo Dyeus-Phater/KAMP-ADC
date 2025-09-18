@@ -11,6 +11,7 @@ An intelligent extension of KAMP (Klipper Adaptive Meshing & Purging) that autom
 -  **Smart Adaptive Density**: Automatically adjusts probe points based on relative print size
 -  **Time Optimization**: Fewer points for large prints, more points for small prints
 -  **Fully Customizable**: Configure thresholds and multipliers to your needs
+-  **thermal hold timer**: Set the time the printer should wait after reaching the target temperature according to the print size
 -  **Detailed Feedback**: Real-time information about applied adjustments
 -  **Full Compatibility**: Maintains all original KAMP functionality
 
